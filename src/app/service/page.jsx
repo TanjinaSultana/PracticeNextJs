@@ -13,9 +13,9 @@ const Servicepage = () => {
         <div>
             <h1>ServicePage</h1>
             {
-data.map(d=>{
+data.map((d,index)=>{
     return(
-        <div>
+        <div key={index}> 
 
     <Link href={`/service/${d.id}`}>
     <h1>{d.title}</h1>
