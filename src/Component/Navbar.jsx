@@ -23,6 +23,9 @@ const Navbar = () => {
     <Link href='/posts'>
                <li className='w-1/2'>Post</li>
     </Link>
+    <Link href='/meals'>
+               <li className='w-1/2'>Meal</li>
+    </Link>
                 </ul>
             </div>
         );
