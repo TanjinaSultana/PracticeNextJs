@@ -1,5 +1,15 @@
 import Link from "next/link";
 import React from "react";
+export async function generateMetadata({ params }) {
+  const post = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${params?.id}`
+  ).then((res) => res.json());
+
+  return {
+    title: `Post: ${post.title}`,
+    description: post.body,
+  };
+}
 
 // ✅ Fetch posts
 export const getSinglePost = async (id) => {

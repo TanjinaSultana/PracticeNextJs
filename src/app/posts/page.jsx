@@ -1,6 +1,11 @@
 import Link from "next/link";
 import React from "react";
 
+ 
+export const metadata = {
+  title: "Posts",
+  description: "All available posts",
+};
 // ✅ Fetch posts
 export const getPost = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
